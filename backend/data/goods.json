@@ -1,0 +1,37 @@
+[
+  {
+    "id" : 1,
+    "name": "apple",
+    "category": "fruit"
+  },
+  {
+    "id" : 2,
+    "name": "banana",
+    "category": "fruit"
+  },
+  {
+    "id" : 3,
+    "name": "strawberry",
+    "category": "fruit"
+  },
+  {
+    "id" : 4,
+    "name": "watermelon",
+    "category": "fruit"
+  },
+  {
+    "id" : 5,
+    "name": "carrot",
+    "category": "fruit"
+  },
+  {
+    "id" : 6,
+    "name": "milk",
+    "category": "fruit"
+  },
+  {
+    "id" : 7,
+    "name": "tomato",
+    "category": "fruit"
+  }
+]
