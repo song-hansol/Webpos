@@ -2,42 +2,49 @@
   {
     "id" : 1,
     "name": "apple",
+    "price": 300,
     "category": "fruit",
     "imagePath": "../assets/apple.png"
   },
   {
     "id" : 2,
     "name": "banana",
+    "price": 500,
     "category": "fruit",
     "imagePath": "../assets/banana.png"
   },
   {
     "id" : 3,
     "name": "strawberry",
+    "price": 1000,
     "category": "fruit",
     "imagePath": "../assets/strawberry.png"
   },
   {
     "id" : 4,
     "name": "watermelon",
+    "price": 5000,
     "category": "fruit",
     "imagePath": "../assets/watermelon.png"
   },
   {
     "id" : 5,
     "name": "carrot",
+    "price": 10,
     "category": "fruit",
     "imagePath": "../assets/carrot.png"
   },
   {
     "id" : 6,
     "name": "milk",
+    "price": 3000,
     "category": "fruit",
     "imagePath": "../assets/milk.png"
   },
   {
     "id" : 7,
     "name": "tomato",
+    "price": 500,
     "category": "fruit",
     "imagePath": "../assets/tomato.png"
   }

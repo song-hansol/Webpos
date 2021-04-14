@@ -32,6 +32,7 @@ export default{
     selectItem(Item, index) {
       localStorage.setItem(index, Item)
       this.Items.push(Item)
+      console.log("log"+Item)
     },
     removeItem(Item, index) {
       localStorage.removeItem(Item)
