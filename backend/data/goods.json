@@ -2,36 +2,43 @@
   {
     "id" : 1,
     "name": "apple",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/apple.png"
   },
   {
     "id" : 2,
     "name": "banana",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/banana.png"
   },
   {
     "id" : 3,
     "name": "strawberry",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/strawberry.png"
   },
   {
     "id" : 4,
     "name": "watermelon",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/watermelon.png"
   },
   {
     "id" : 5,
     "name": "carrot",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/carrot.png"
   },
   {
     "id" : 6,
     "name": "milk",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/milk.png"
   },
   {
     "id" : 7,
     "name": "tomato",
-    "category": "fruit"
+    "category": "fruit",
+    "imagePath": "../assets/tomato.png"
   }
 ]

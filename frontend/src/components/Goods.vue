@@ -23,7 +23,8 @@ export default{
 
       if (localStorage.length > 0) {
         for (var i = 0; i < localStorage.length; i++) {
-          this.Items.push(localStorage.key(i))
+          console.log(localStorage.getItem(localStorage.key(i)));
+          this.Items.push(localStorage.getItem(localStorage.key(i)));
         }
       }
   },
