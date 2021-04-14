@@ -1,46 +1,47 @@
 <template>
   <div id="goodsInput">
-    <!-- <input type="text" v-model="Item" v-on:keyup.enter="addItem"></input>
-    <button v-on:click="addItem">add</button> -->
-
-      <!-- <ul>
-        <li is="goods" v-for="(good, index) in goods" v-bind:key="good.id" v-bind:title="good.name" v-on:click="selectItem(good, index+1)">
-          {{good.id}} . {{good.name}} <br>
-        </li>
-    </ul> -->
     <v-app id="inspire">
-    <v-container fluid>
-      <v-row>
-        <v-col v-for="(good, index) in goods" :key="n" cols="12" md="4" sm="4" v-bind:key="good.id" v-bind:title="good.name" v-on:click="selectItem(good, index+1)">
-          <!-- <v-card class="pa-3" outlined tile  style="height: 100px;" color="#1F7087">
-              <v-col class="shrink">
-                  <v-card-title class="pa-0">{{good.name}}</v-card-title>
-                  <v-img :src="require(`@/assets/${good.name}.png`)" max-width="40" class="ml-3"></v-img>
+    <v-card>
+      <v-tabs
+        grow
+        v-model="tab"
+        color="deep-purple accent-4"
+        right>
+        <v-tab v-for="category in categories" :key="category">
+          {{category}}
+        </v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="tab">
+        <v-tab-item v-for="category in categories" :key="category">
+          <v-container fluid>
+            <v-row>
+              <v-col v-for="(good, index) in goods" v-if="good.category === category" :key="n" cols="12" md="4" sm="4" v-bind:key="good.id" v-bind:title="good.name" v-on:click="selectItem(good, index+1)">
+                <v-car
+                  outlined
+                  rounded
+                >
+                  <v-list-item>
+                    <v-list-item-content>
+                      <div class="overline mb-4">
+                        {{good.name}}
+                      </div>
+                    </v-list-item-content>
+                    <v-list-item-avatar
+                      rounded
+                      outlined
+                      size="80"
+                    >
+                    <v-img :src="require(`@/assets/${good.name}.png`)"></v-img>
+                    </v-list-item-avatar>
+                  </v-list-item>
+                </v-card>
               </v-col>
-          </v-card> -->
-          <v-card
-            outlined
-            rounded
-          >
-            <v-list-item>
-              <v-list-item-content>
-                <div class="overline mb-4">
-                  {{good.name}}
-                </div>
-              </v-list-item-content>
-              <v-list-item-avatar
-                rounded
-                outlined
-                size="80"
-              >
-              <v-img :src="require(`@/assets/${good.name}.png`)"></v-img>
-              </v-list-item-avatar>
-            </v-list-item>
-          </v-card>
-
-        </v-col>
-      </v-row>
-    </v-container>
+            </v-row>
+          </v-container>
+        </v-tab-item>
+      </v-tabs-items>
+      </v-tabs>
+    </v-card>
     </v-app>
   </div>
 
@@ -50,7 +51,9 @@ export default{
   data(){
     return{
       Item: '',
-      goods: null
+      goods: null,
+      tab: null,
+      categories: ["All", "fruit", "beverage", "clothes", "homeAppliance"]
     }
   },
   created(){

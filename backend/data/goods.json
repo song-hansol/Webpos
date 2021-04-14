@@ -3,49 +3,54 @@
     "id" : 1,
     "name": "apple",
     "price": 300,
-    "category": "fruit",
-    "imagePath": "../assets/apple.png"
+    "category": "fruit"
   },
   {
     "id" : 2,
     "name": "banana",
     "price": 500,
-    "category": "fruit",
-    "imagePath": "../assets/banana.png"
+    "category": "fruit"
   },
   {
     "id" : 3,
     "name": "strawberry",
     "price": 1000,
-    "category": "fruit",
-    "imagePath": "../assets/strawberry.png"
+    "category": "fruit"
   },
   {
     "id" : 4,
     "name": "watermelon",
     "price": 5000,
-    "category": "fruit",
-    "imagePath": "../assets/watermelon.png"
+    "category": "fruit"
   },
   {
     "id" : 5,
     "name": "carrot",
     "price": 10,
-    "category": "fruit",
-    "imagePath": "../assets/carrot.png"
+    "category": "fruit"
   },
   {
     "id" : 6,
     "name": "milk",
     "price": 3000,
-    "category": "fruit",
-    "imagePath": "../assets/milk.png"
+    "category": "beverage"
   },
   {
     "id" : 7,
     "name": "tomato",
     "price": 500,
-    "category": "fruit",
-    "imagePath": "../assets/tomato.png"
+    "category": "fruit"
+  },
+  {
+    "id" : 8,
+    "name": "sweater",
+    "price": 500000,
+    "category": "clothes"
+  },
+  {
+    "id" : 9,
+    "name": "coffeemachine",
+    "price": 1000000,
+    "category": "homeAppliance"
   }
 ]
