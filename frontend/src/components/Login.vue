@@ -2,11 +2,11 @@
   <div id="login">
     <form @submit.prevent="onSubmit">
       <p>사용자</p>
-      <input type="text" name="id" v-model="id">
+      <input id="UserInput" type="text" name="id" v-model="id">
       <p>비밀번호</p>
-      <input type="password" name="password" v-model="password">
+      <input id="PwInput" type="password" name="password" v-model="password">
       <br><br>
-      <button>button</button>
+      <button id="LoginBtn">button</button>
     </form>
   </div>
 </template>
@@ -56,12 +56,20 @@ export default{
 }
 </script>
 <style>
-  #login{
-    background-image: url('../assets/food2.png');
-    background-position: center;
-    height: 100%;
-    font-size: 20px;
-    font-weight: bold;
-    color: #FFFFFF;
-  }
+#login{
+  background-position: center;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+#UserInput{
+  border: 1px;
+}
+#PwInput{
+  border: 1px;
+}
+#LoginBtn{
+  border: 1px;
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div id="parent">
-    <p id="logo">Web Pos</p>
-    <p id="date">{{ timestamp }}</p>
-    <p id = "user" v-if="this.$store.state.user">{{this.$store.state.user.name}}</p>
-    <button id ="logout" v-if="this.$store.state.isLogIn" @click="logOut">LogOut</button>
-  </div>
+     <div id="logo">Web Pos</div>
+     <div id="date">{{ timestamp }}</div>
+     <div id="user" v-if="this.$store.state.user">{{this.$store.state.user.name}}</div>
+     <button id="logout" v-if="this.$store.state.isLogIn" @click="logOut">LogOut</button>
+   </div>
 </template>
 <script>
 export default{
@@ -25,7 +25,8 @@ export default{
   },
   computed: {
     user() {
-      return this.$store.state.user.name;}
+      return this.$store.state.user.name;
+    }
   },
   methods: {
     logOut() {
@@ -44,26 +45,44 @@ export default{
 </script>
 <style>
 #parent{
-  height: 50px;
+  height: 100px;
   position: relative;
+  background-color: #2fa8f8;
 }
 #logo {
-  font-weight: bold;
+  /* font-weight: bold; */
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
   position : absolute;
+  top: 30px;
   left: 10px;
 }
 #date {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
   position : absolute;
-  right: 190px;
+  top: 30px;
+  right: 250px;
 }
 #user {
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
   position : absolute;
-  right: 80px;
+  top: 30px;
+  right: 100px;
 }
 #logout {
+  height: 30px;
+  width: 70px;
+  border: 1px blue;
+  border-radius: 5px;
+  background-color: #ffffff;
+  text-align: center;
   position : absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 30px;
 }
 </style>
