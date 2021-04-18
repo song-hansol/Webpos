@@ -52,5 +52,65 @@
     "name": "coffeemachine",
     "price": 1000000,
     "category": "homeAppliance"
+  },
+  {
+    "id" : 10,
+    "name": "orangejuice",
+    "price": 6000,
+    "category": "beverage"
+  },
+  {
+    "id" : 11,
+    "name": "coke",
+    "price": 3000,
+    "category": "beverage"
+  },
+  {
+    "id" : 12,
+    "name": "cider",
+    "price": 3000,
+    "category": "beverage"
+  },
+  {
+    "id" : 13,
+    "name": "cherry",
+    "price": 3000,
+    "category": "fruit"
+  },
+  {
+    "id" : 14,
+    "name": "melon",
+    "price": 5000,
+    "category": "fruit"
+  },
+  {
+    "id" : 15,
+    "name": "coconut",
+    "price": 2500,
+    "category": "fruit"
+  },
+  {
+    "id" : 16,
+    "name": "cucumber",
+    "price": 800,
+    "category": "fruit"
+  },
+  {
+    "id" : 17,
+    "name": "potato",
+    "price": 300,
+    "category": "fruit"
+  },
+  {
+    "id" : 18,
+    "name": "sweetpotato",
+    "price": 400,
+    "category": "fruit"
+  },
+  {
+    "id" : 19,
+    "name": "pepper",
+    "price": 1000,
+    "category": "fruit"
   }
 ]
