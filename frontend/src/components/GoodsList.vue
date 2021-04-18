@@ -2,7 +2,7 @@
   <section>
     <ul>
       <li v-for="(Item, index) in propsdata" class="shadow">
-        <div class="ItemName">{{ Item.name }}</div>
+        <div class="ItemName">{{ Item.item.name }}</div>
         <div class="ItemPrice">{{ Item.price}}</div>
         <div class="removeBtn" type="button" v-on:click="removeItem(Item,index)">
           <i class="far fa-trash-alt" aria-hidden="true"></i>
@@ -28,6 +28,7 @@ ul{
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 0px;
+  overflow: auto;
 }
 li{
   display: flex;

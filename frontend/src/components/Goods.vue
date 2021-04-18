@@ -2,7 +2,7 @@
   <div id="main">
     <GoodsInput id="goodsInput" v-on:selectItem="selectItem"></GoodsInput>
     <GoodsList id="goodsList" v-bind:propsdata="Items" v-on:removeItem="removeItem"></GoodsList>
-    <GoodsFooter id="goodsFooter" v-bind:propsdata="count" v-bind:propsdata1="price" v-on:clearAll="clearAll"></GoodsFooter>
+    <GoodsFooter id="goodsFooter" v-bind:propsdata="totalCount" v-bind:propsdata1="totalPrice" v-on:clearAll="clearAll"></GoodsFooter>
   </div>
 </template>
 <script>
@@ -14,9 +14,8 @@ export default{
   data() {
     return {
       Items: [],
-      count: 0,
-      price: 0,
-      chckflg: false
+      totalCount: 0,
+      totalPrice: 0,
     }
   },
   created() {
@@ -26,21 +25,28 @@ export default{
   },
   methods: {
     selectItem(Item, index) {
-      this.Items.push(Item)
-      console.log("Items length : " + this.Items.length)
-      console.log("Items 요소 : " + this.Items.slice(index, index+1))
-      this.count = this.count+1
-      this.price = this.price+Item.price
+      var flag = false;
+      for(var i=0; i<this.Items.length; i++){
+        if(this.Items[i].item.id == Item.id){
+          this.Items[i].count++;
+          this.Items[i].price += this.Items[i].item.price;
+          flag = true;
+          break;
+        }
+      }
+      if(!flag){
+        this.Items.push({item: Item, count: 1, price: Item.price})
+      }
+      this.totalCount++
+      this.totalPrice += Item.price
     },
     removeItem(Item, index) {
-      localStorage.removeItem(Item)
       this.Items.splice(index, 1)
     },
     clearAll() {
-      localStorage.clear()
       this.Items = []
-      this.count = 0
-      this.price = 0
+      this.totalCount = 0
+      this.totalPrice = 0
     }
   },
   components: {

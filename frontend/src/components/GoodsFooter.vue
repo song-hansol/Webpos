@@ -12,7 +12,7 @@
         </div>
         <div id="DiscountAre">
           <span>Discount</span>
-          <span>{{ discount }}</span>
+          <span>0</span>
         </div>
       </span>
       <span class="PayamountArea">
@@ -31,15 +31,7 @@
 </template>
 <script>
 export default{
-  props: {
-    propsdata: Number,
-    propsdata1: Number
-  },
-  data(){
-    return{
-      discount: 0
-    }
-  },
+  props: [ 'propsdata', 'propsdata1' ],
   methods: {
     clearItem() {
       this.$emit('clearAll')
