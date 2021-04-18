@@ -1,13 +1,28 @@
 <template>
   <div id="login">
-    <form @submit.prevent="onSubmit">
-      <p>사용자</p>
-      <input id="UserInput" type="text" name="id" v-model="id">
-      <p>비밀번호</p>
-      <input id="PwInput" type="password" name="password" v-model="password">
-      <br><br>
-      <button id="LoginBtn">button</button>
-    </form>
+    <v-app>
+    <br></br>
+    <br></br>
+    <v-form @submit.prevent="onSubmit" id="check-login-form">
+      <v-text-field
+              align="center"
+              label="Id"
+              outlined
+              style="width:300px;
+              margin-right:auto; margin-left:auto;"
+
+              id="UserInput" type="text" name="id" v-model="id"></v-text-field>
+      <v-text-field
+              align="center"
+              label="Password"
+              outlined
+              style="width:300px;
+              margin-right:auto; margin-left:auto;"
+              id="PwInput" type="password" name="password" v-model="password"></v-text-field>
+
+      <v-btn id="LoginBtn" class="black--text" type="submit" form="check-login-form">Login</v-btn>
+    </v-form>
+  </v-app>
   </div>
 </template>
 <script>
@@ -63,13 +78,5 @@ export default{
   font-weight: bold;
   color: #000000;
 }
-#UserInput{
-  border: 1px;
-}
-#PwInput{
-  border: 1px;
-}
-#LoginBtn{
-  border: 1px;
-}
+
 </style>
