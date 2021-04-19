@@ -71,15 +71,16 @@ export default{
 #goodsList{
   background-color: #ffffff;
   width: 40%;
-  height: 70%;
+  height: 60%;
   position : absolute;
+  top: 0px;
   left: 0px;
   /* margin-left: 0px; */
 }
 #goodsFooter{
   background-color: #d2ebfd;
   width: 40%;
-  height: 30%;
+  height:40%;
   position : absolute;
   left: 0px;
   bottom: 0px;

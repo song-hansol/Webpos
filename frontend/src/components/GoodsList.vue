@@ -55,4 +55,8 @@ li{
   text-align: right;
   color: #de4343;
 }
+ul {
+  height: 100%;
+  overflow-y:scroll;
+}
 </style>
