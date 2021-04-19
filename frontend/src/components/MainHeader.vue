@@ -1,7 +1,7 @@
 <template>
   <div id="parent">
      <div id="logo">Web Pos</div>
-     <div id="date">{{ timestamp }}</div>
+     <div id="date" v-if="this.$store.state.user">{{ timestamp }}</div>
      <div id="user" v-if="this.$store.state.user">{{this.$store.state.user.name}}</div>
      <button id="logout" v-if="this.$store.state.isLogIn" @click="logOut">LogOut</button>
    </div>
@@ -64,7 +64,7 @@ export default{
   text-align: center;
   position : absolute;
   top: 30px;
-  right: 250px;
+  right: 270px;
 }
 #user {
   color: #ffffff;
@@ -72,7 +72,7 @@ export default{
   text-align: center;
   position : absolute;
   top: 30px;
-  right: 100px;
+  right: 120px;
 }
 #logout {
   height: 30px;

@@ -1,31 +1,33 @@
 <template>
-  <div class="Total">
+  <div class="total">
     <div class="footertop">
-      <span class="PriceArea">
-        <div id="CountArea">
+      <span class="priceArea">
+        <div id="countArea">
           <span>Count</span>
           <span>{{ propsdata }}</span>
         </div>
-        <div id="SubtotalArea">
+        <div id="subtotalArea">
           <span>Subtotal</span>
           <span>{{ propsdata1 }}</span>
         </div>
-        <div id="DiscountAre">
+        <div id="discountArea">
           <span>Discount</span>
           <span>0</span>
         </div>
       </span>
-      <span class="PayamountArea">
-        <button id="Cash">Cash</button>
+
+      <span class="payamountArea">
+        <button id="cash">Cash</button>
       </span>
+
     </div>
     <div class="footerbottom">
       <button class="clearAllBtn" v-on:click="clearItem">Cancle</button>
-      <button class="FooterBtn">Save</button>
-      <button class="FooterBtn">Notes</button>
-      <button class="FooterBtn">Discount</button>
-      <button class="FooterBtn">Reprint</button>
-      <button class="Etc">More</button>
+      <button class="footerBtn">Save</button>
+      <button class="footerBtn">Notes</button>
+      <button class="footerBtn">Discount</button>
+      <button class="footerBtn">Reprint</button>
+      <button class="etc">More</button>
     </div>
   </div>
 </template>
@@ -40,30 +42,32 @@ export default{
 }
 </script>
 <style>
-.Total{
-  height: 60%;
-}
-.footertop{
-  height: 60%;
-}
-.footerbottom{
+.total{
   height: 40%;
 }
-.PriceArea{
-  float: left;
-  height: 100%;
+.footertop{
+  position: relative;
+  height:50%;
+}
+.footerbottom{
+  height: 50%;
+}
+
+.priceArea{
+  position : absolute;
+  height: 80%;
   width: 50%;
   background-color: #a5ec6e;
-  margin-right: 5px;
+  left: 0px
 }
-.PayamountArea{
-  float: right;
-  height: 100%;
+.payamountArea{
+  position : absolute;
+  height: 80%;
   width: 50%;
   background-color: #f3cea4;
-  margin: 0px;
+  right: 0px;
 }
-#Cash{
+#cash{
   border: 3px;
 }
 .clearAllBtn{
@@ -75,7 +79,7 @@ export default{
   background-color: #f03a37;
   border-radius: 5px;
 }
-.FooterBtn{
+.footerBtn{
   height: 50px;
   width: 80px;
   margin-left: 5px;
@@ -84,7 +88,7 @@ export default{
   background-color: #2fa8f8;
   border-radius: 5px;
 }
-.Etc{
+.etc{
   height: 50px;
   width: 40px;
   margin-left: 5px;

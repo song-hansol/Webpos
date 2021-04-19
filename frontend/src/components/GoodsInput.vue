@@ -15,7 +15,7 @@
         <v-tab-item v-for="category in categories" :key="category">
           <v-container fluid>
             <v-row>
-              <v-col v-for="(good, index) in goods" v-if="good.category === category" :key="n" cols="12" md="4" sm="4" v-bind:key="good.id" v-bind:title="good.name" v-on:click="selectItem(good, index+1)">
+              <v-col v-for="(good, index) in goods" v-if="good.category === category || category === 'All'" :key="n" cols="12" md="4" sm="4" v-bind:key="good.id" v-bind:title="good.name" v-on:click="selectItem(good, index+1)">
                 <v-car
                   outlined
                   rounded
