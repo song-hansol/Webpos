@@ -28,7 +28,6 @@ ul{
   padding-left: 5px;
   padding-right: 5px;
   margin-top: 0px;
-  overflow: auto;
 }
 li{
   display: flex;
