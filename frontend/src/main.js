@@ -7,7 +7,9 @@ import axios from 'axios'
 import {store} from './store'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
+import VuetifyNumberInput from '@jzolago/vuetify-number-input'
 Vue.use(Vuetify);
+Vue.use(VuetifyNumberInput);
 
 Vue.prototype.$http = axios
 Vue.config.productionTip = false

@@ -5,6 +5,7 @@
     <GoodsFooter id="goodsFooter" v-bind:propsdata="totalCount" v-bind:propsdata1="totalPrice" v-on:clearAll="clearAll"></GoodsFooter>
   </div>
 </template>
+
 <script>
 import GoodsList from './GoodsList'
 import GoodsInput from './GoodsInput'
@@ -16,6 +17,7 @@ export default{
       Items: [],
       totalCount: 0,
       totalPrice: 0,
+      trnum: 1
     }
   },
   created() {
@@ -41,12 +43,35 @@ export default{
       this.totalPrice += Item.price
     },
     removeItem(Item, index) {
+      this.totalCount -= Item.count
+      this.totalPrice -= Item.price
       this.Items.splice(index, 1)
     },
     clearAll() {
-      this.Items = []
-      this.totalCount = 0
-      this.totalPrice = 0
+
+      const object = {
+        Items : this.Items,
+        totalPrice : this.totalPrice,
+        totalCount : this.totalCount,
+        trnum : this.trnum,
+        posNo : this.$store.state.posNo,
+        date : this.$store.state.date
+      }
+
+      this.$http.post("/api/finish", {object}, {"Content-Type":"application-json"})
+      .then((res) => {
+        if(res.data.success) {
+          console.log("finish")
+          this.Items = []
+          this.totalCount = 0
+          this.totalPrice = 0
+          this.trnum++
+          console.log(this.trnum)
+        }
+        else {
+          console.log("error")
+        }
+      });
     }
   },
   components: {

@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export const store = new Vuex.Store({
   state: {
     user: null,
-    isLogIn: false
+    isLogIn: false,
+    posNo: 1,
+    date: null
   },
   getters: {
     // user: (state) => { return state.user }
@@ -17,8 +19,10 @@ export const store = new Vuex.Store({
   },
   mutations: {
     setUser(state, user) {
-      state.user = user },
+      state.user = user
+    },
     setLogInState(state, boolean) {
-      state.isLogIn = boolean }
+      state.isLogIn = boolean
+    }
   }
 })

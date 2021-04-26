@@ -9,9 +9,8 @@ const router = express.Router();
 // });
 
 router.get('/', function(req,res,next){
-  console.log("servertest1");
+
   if(req.isAuthenticated() && req.user){
-    console.log("servertest2");
     return res.json({user: req.user});
   }
 
@@ -19,7 +18,7 @@ router.get('/', function(req,res,next){
 });
 
 router.post('/', function(req,res,next){
-    console.log("servertest3");
+
   if(req.isAuthenticated()){
     return res.redirect('/');
   }

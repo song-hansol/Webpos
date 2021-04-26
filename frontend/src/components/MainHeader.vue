@@ -1,9 +1,9 @@
 <template>
   <div id="parent">
-     <div id="logo">Web Pos</div>
+     <div id="logo">POS</div>
      <div id="date" v-if="this.$store.state.user">{{ timestamp }}</div>
      <div id="user" v-if="this.$store.state.user">{{this.$store.state.user.name}}</div>
-     <button id="logout" v-if="this.$store.state.isLogIn" @click="logOut">LogOut</button>
+     <v-btn id="logout" v-if="this.$store.state.isLogIn" @click="logOut">LOGOUT</v-btn>
    </div>
 </template>
 <script>
@@ -19,9 +19,10 @@ export default{
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
     const date = now.getDate();
-    const weekList = new Array('Sun','Mon','Tue','Wed','Ths','Fri','Sat');
+    const weekList = new Array('SUN','MON','TUE','WEB','THS','FRI','SAT');
     const week = weekList[now.getDay()];
     this.timestamp = year+'/'+month+'/'+date+' '+week;
+    this.$store.state.date = this.timestamp
   },
   computed: {
     user() {
@@ -45,18 +46,18 @@ export default{
 </script>
 <style>
 #parent{
-  height: 100px;
-  position: relative;
+  height: 10%;
+  /* position: relative; */
   background-color: #2fa8f8;
 }
 #logo {
-  /* font-weight: bold; */
   color: #ffffff;
   font-size: 30px;
   text-align: center;
   position : absolute;
   top: 30px;
-  left: 10px;
+  left: 30px;
+  font-family: 'Nanum Gothic';
 }
 #date {
   color: #ffffff;
@@ -64,7 +65,8 @@ export default{
   text-align: center;
   position : absolute;
   top: 30px;
-  right: 270px;
+  right: 250px;
+  font-family: 'Nanum Gothic';
 }
 #user {
   color: #ffffff;
@@ -72,17 +74,16 @@ export default{
   text-align: center;
   position : absolute;
   top: 30px;
-  right: 120px;
+  right: 170px;
+  font-family: 'Nanum Gothic';
 }
 #logout {
   height: 30px;
-  width: 70px;
-  border: 1px blue;
-  border-radius: 5px;
-  background-color: #ffffff;
+  width: 100px;
   text-align: center;
   position : absolute;
   right: 20px;
   top: 30px;
+  font-family: 'Nanum Gothic';
 }
 </style>

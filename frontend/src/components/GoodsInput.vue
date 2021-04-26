@@ -1,7 +1,7 @@
 <template>
   <div id="goodsInput">
     <v-app id="inspire">
-    <v-card>
+    <v-card style="height: 100%;">
       <v-tabs
         grow
         v-model="tab"
@@ -53,7 +53,7 @@ export default{
       Item: '',
       goods: null,
       tab: null,
-      categories: ["All", "fruit", "beverage", "clothes", "homeAppliance"]
+      categories: ["All", "fruit", "beverage", "clothes", "homeappliance"]
     }
   },
   created(){
